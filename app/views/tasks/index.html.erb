@@ -2,5 +2,5 @@
 <%= link_to 'New', new_task_url %>
 
 <% @tasks.each do |task| %>
-  <p> <%= link_to task.title, task_path(task)  %></p>
+   <p> <%= check_box('tag', task.id, {checked: task.completed}) %> <%= link_to task.title, task_path(task)  %></p>
 <% end %>
